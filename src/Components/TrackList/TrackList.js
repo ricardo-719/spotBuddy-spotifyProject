@@ -11,8 +11,6 @@ export class TrackList extends React.Component {
                             track={track}
                             key={track.id} />
                 })}
-                
-                {/* You will add a map method that renders a set of Track components */}
             </div>
         )
     }

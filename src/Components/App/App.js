@@ -6,7 +6,9 @@ export class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      searchResults: [{name:test, artist:testy, album:testament, id:01}]
+      searchResults: [{name:"test", artist:"testy", album:"testament", id:01}],
+      playlistName: "hardcoded",
+      playlistTracks: [{name:"test02", artist:"testy02", album:"testamore", id:02}]
     }
   }
   render() {
@@ -14,10 +16,10 @@ export class App extends React.Component {
     <div>
       <h1>Spot<span className="highlight">Bud</span>dy</h1>
       <div className="App">
-        {/* Add a SearchBar component */}
+        <SearchBar />
         <div className="App-playlist">
           <SearchResults searchResults={this.state.searchResults} />
-          {/* Add a Playlist component */}
+          <Playlist playlistName={this.state.playlistName} playlistTracks={this.state.playlistTracks}/>
         </div>
       </div>
     </div>
