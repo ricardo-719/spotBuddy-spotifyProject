@@ -9,11 +9,11 @@ export class Track extends React.Component {
     }
 
     renderAction() {
-        const buttonSign = (<button className="Track-action" 
+        const buttonSign = <button className="Track-action" 
         onClick={this.props.isRemoval ? this.removeTrack : this.addTrack}>
             {this.props.isRemoval ? '-' : '+'}
-        </button>)
-        return  buttonSign;
+        </button>
+        return  buttonSign; 
     }
 
     addTrack() {
@@ -29,9 +29,9 @@ export class Track extends React.Component {
             <div className="Track">
                 <div className="Track-information">
                     <h3>{this.props.track.name}</h3>
-                    <p>{this.props.track.artist | this.props.track.album}</p>
+                    <p>{this.props.track.artist} | {this.props.track.album}</p>
                 </div>
-                {this.renderAction}
+                {this.renderAction()}
             </div>
         )
     }
