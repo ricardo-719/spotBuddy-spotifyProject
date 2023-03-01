@@ -9,10 +9,10 @@ export class Track extends React.Component {
     }
 
     renderAction() {
-        const buttonSign = <button className="Track-action" 
+        const buttonSign = (<button className="Track-action" 
         onClick={this.props.isRemoval ? this.removeTrack : this.addTrack}>
             {this.props.isRemoval ? '-' : '+'}
-        </button>
+        </button>)
         return  buttonSign;
     }
 
