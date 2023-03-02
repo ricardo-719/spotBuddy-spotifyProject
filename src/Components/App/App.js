@@ -1,4 +1,5 @@
 import React from 'react'
+import Spotify from '../../util/Spotify';
 import { SearchResults } from '../SearchResults/SearchResults';
 import { Playlist } from '../Playlist/Playlist';
 import { SearchBar } from '../SearchBar/SearchBar';
@@ -52,8 +53,9 @@ savePlaylist() {
   }
 
   search(query) {
-    console.log(query);
-    //API fetch request?
+    Spotify.search(query).then(searchResults => {
+      this.setState({searchResults: searchResults})
+    })
   }
 
   render() {
